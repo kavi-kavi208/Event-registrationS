@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #007BFF;
+            --primary-dark: #0056b3;
+            --border: #ccc;
+            --text: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #f9f9f9);
+            margin: 0;
+            padding: 20px;
+            color: var(--text);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        label {
+            display: block;
+            margin-top: 14px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 9px;
+            margin-top: 6px;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 4px rgba(0,123,255,.3);
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin-top: 14px;
+        }
+
+        .gender {
+            display: flex;
+            gap: 15px;
+            margin-top: 6px;
+        }
+
+        .gender label {
+            font-weight: normal;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: var(--primary-dark);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            margin-top: 15px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>EVENT REGISTRATION</h1>
+
+<main>
+    <form>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="dob">Date of Birth</label>
+        <input id="dob" name="dob" type="date" required>
+
+        <fieldset>
+            <label>Gender</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        </fieldset>
+
+        <label for="college">College Name</label>
+        <input id="college" name="college" type="text" required>
+
+        <label for="branch">Branch & Department</label>
+        <input id="branch" name="branch" type="text" placeholder="CSE - AI & ML" required>
+
+        <label for="year">Year of Study</label>
+        <input id="year" name="year" type="number" min="1" max="5" required>
+
+        <label for="source">How did you hear about this event?</label>
+        <input id="source" name="source" type="text" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input id="mobile" name="mobile" type="tel" pattern="[0-9]{10}" placeholder="10-digit number" required>
+
+        <label for="payment">Payment Method</label>
+        <select id="payment" name="payment" required>
+            <option value="">-- Select Payment Method --</option>
+            <option>GPay</option>
+            <option>PhonePe</option>
+            <option>Cash</option>
+        </select>
+
+        <button type="submit">Register Now</button>
+    </form>
+
+    <footer>© 2026 Event Registration</footer>
+</main>
+
+</body>
+</html>
